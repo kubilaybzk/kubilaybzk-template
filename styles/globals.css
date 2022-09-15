@@ -1,26 +1,42 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply bg-Background dark:bg-Dark;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.RightIconContainer {
+  @apply rounded-full  fill-current w-10 h-10 flex items-center justify-center cursor-pointer;
+}
+.RightIcons {
+  @apply w-5 h-5 fill-current;
 }
 
-* {
-  box-sizing: border-box;
+.LeftSocialContainer {
+  @apply w-7 h-7 rounded-full bg-Yellow flex items-center justify-center p-[4px];
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.RightMenuContainer {
+  @apply w-full flex flex-col  mt-6 gap-y-4  py-[25px] border-b-[2px]  border-b-Background dark:border-b-DarkV2;
 }
+
+.CardIcons {
+  @apply text-black dark:text-Yellow text-[56px];
+}
+
+.KblyInput {
+  @apply outline-none border-[1px] border-Yellow bg-Background w-[300px] md:w-[400px] lg:w-[500px] text-xs md:text-sm px-[12px] py-[10px] rounded
+  hover:border-2 hover:px-[11px] hover:py-[9px]
+  focus:border-2 focus:px-[11px] focus:py-[9px]
+  focus-within:border-2 focus-within:px-[11px] focus-within:py-[9px]
+  focus-visible:border-2 focus-visible:px-[11px] focus-visible:py-[9px]
+  placeholder:text-xs placeholder:md:text-sm
+  dark:text-black
+}
+.InputErros {
+  @apply text-[12px] lg:text-[14px] text-red-600 absolute bottom-3 left-0;
+}
+
+
+
